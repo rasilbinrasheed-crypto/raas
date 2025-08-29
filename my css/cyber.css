@@ -1,0 +1,13 @@
+:root { --glass-bg: rgba(255,255,255,.06); --glass-border: rgba(255,255,255,.14); }
+html, body { height: 100%; }
+.cyber-gradient { background: linear-gradient(135deg, #0a0a12 0%, #111122 50%, #0b0b16 100%); }
+.animated-gradient { background: linear-gradient(45deg,#6a00ff,#00fff0,#ff00ff,#6a00ff); background-size:300% 300%; animation: gradient 12s ease infinite; filter: blur(60px) opacity(.35); }
+@keyframes gradient { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%}}
+.glass { background: var(--glass-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border:1px solid var(--glass-border); box-shadow: 0 8px 40px rgba(0,0,0,.45); }
+.neon-border { box-shadow: 0 0 8px rgba(0,255,240,.6), 0 0 16px rgba(155,92,255,.45); }
+.neumorph { box-shadow: 8px 8px 16px rgba(0,0,0,.55), -8px -8px 16px rgba(255,255,255,.02); }
+.btn-base { position: relative; display:inline-flex; align-items:center; justify-content:center; padding:.6rem 1rem; border-radius:12px; color:#fff; background:#0f0f18; }
+.btn-base::before { content:""; position:absolute; inset:0; border-radius:12px; background:linear-gradient(to right, #9b5cff, #00fff0, #ff00ff); opacity:.25; filter: blur(6px); }
+.btn-base span { position: relative; }
+.reveal { opacity: 0; transform: translateY(14px); transition: all .6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }

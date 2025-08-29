@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Muhammed Rasal | Portfolio</title>
+
+<!-- Tailwind CDN with basic config -->
+<script>
+  tailwind = null;
+  window.tailwind = window.tailwind || {};
+  window.tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          neon: { cyan: '#00fff0', magenta: '#ff00ff', purple: '#9b5cff' }
+        },
+        boxShadow: {
+          neon: '0 0 10px rgba(0,255,240,.7), 0 0 20px rgba(155,92,255,.5)',
+          glass: '0 10px 40px rgba(0,0,0,.35)'
+        },
+        keyframes: {
+          gradient: {
+            '0%,100%': { backgroundPosition: '0% 50%' },
+            '50%': { backgroundPosition: '100% 50%' }
+          },
+          glow: {
+            '0%, 100%': { filter: 'drop-shadow(0 0 6px rgba(0,255,240,.6))' },
+            '50%': { filter: 'drop-shadow(0 0 14px rgba(155,92,255,.9))' }
+          }
+        },
+        animation: {
+          gradient: 'gradient 12s ease infinite',
+          glow: 'glow 2.5s ease-in-out infinite'
+        }
+      }
+    }
+  }
+;</script>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="./cyber.css" />
+</head>
+
+<body class="min-h-screen cyber-gradient text-white antialiased selection:bg-[rgba(155,92,255,.3)]">
+  <!-- Top nav -->
+  <header class="sticky top-0 z-30 backdrop-blur bg-black/30 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+      <a href="#" class="font-semibold tracking-tight text-white/90">Rasal</a>
+      <div class="flex items-center gap-3">
+        <a href="#contact" class="text-sm text-white/70 hover:text-white">Contact</a>
+        <button id="themeToggle" class="glass neumorph neon-border rounded-full p-2">
+          <svg id="moon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="#00fff0" stroke-width="1.5"/></svg>
+          <svg id="sun" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hidden"><circle cx="12" cy="12" r="5" stroke="#9b5cff" stroke-width="1.5"/><path d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" stroke="#ff00ff" stroke-width="1.5"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Glow blobs -->
+  <div class="fixed -z-10 inset-0 pointer-events-none">
+    <div class="animated-gradient w-[60vw] h-[60vw] md:w-[40vw] md:h-[40vw] rounded-full absolute -top-20 -left-20"></div>
+    <div class="animated-gradient w-[50vw] h-[50vw] md:w-[32vw] md:h-[32vw] rounded-full absolute -bottom-24 -right-10"></div>
+  </div>
+
+  <!-- Hero -->
+  <section class="max-w-6xl mx-auto px-5 pt-16 md:pt-28 pb-10">
+    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight reveal">
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-purple via-neon-cyan to-neon-magenta">Muhammed Rasal</span>
+    </h1>
+    <p class="mt-4 max-w-2xl text-white/70 text-lg reveal">A curious mind crafting modern web experiences</p>
+    <div class="mt-8 flex items-center gap-4 reveal">
+      <a href="#projects" class="btn-base neon-border glass neumorph"><span>View Projects</span></a>
+      <a href="#contact" class="btn-base neon-border glass neumorph"><span>Hire Me</span></a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="glass rounded-2xl p-6 md:p-10 neon-border">
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight reveal"><span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-purple via-neon-cyan to-neon-magenta">About Me</span></h2>
+        <div class="grid md:grid-cols-2 gap-8 mt-6">
+          <div class="reveal">
+            <p class="text-white/80 leading-relaxed">I’m Rasal, a full-stack developer passionate about elegant UI, crisp motion, and reliable backends. I blend design and engineering to ship delightful, accessible experiences.</p>
+            <div class="mt-6 grid grid-cols-2 gap-4 text-sm">
+              <div>
+                <p class="text-white/60">Education</p>
+                <ul class="mt-2 space-y-2 text-white/85">
+                  <li>Caliph Life School</li>
+                  <li>China University</li>
+                </ul>
+              </div>
+              <div>
+                <p class="text-white/60">Hobbies</p>
+                <ul class="mt-2 space-y-2 text-white/85">
+                  <li>Music, Digital Art</li>
+                  <li>AI Tools, Micro-stories</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="reveal">
+            <p class="text-white/60">Skills</p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="glass neon-border rounded-full px-3 py-1 text-sm text-white/90">HTML</span>
+              <span class="glass neon-border rounded-full px-3 py-1 text-sm text-white/90">CSS</span>
+              <span class="glass neon-border rounded-full px-3 py-1 text-sm text-white/90">JavaScript</span>
+              <span class="glass neon-border rounded-full px-3 py-1 text-sm text-white/90">Tailwind</span>
+              <span class="glass neon-border rounded-full px-3 py-1 text-sm text-white/90">React</span>
+              <span class="glass neon-border rounded-full px-3 py-1 text-sm text-white/90">Node.js</span>
+              <span class="glass neon-border rounded-full px-3 py-1 text-sm text-white/90">MongoDB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="glass rounded-2xl p-6 md:p-10 neon-border">
+        <div class="flex items-center justify-between gap-4 flex-wrap">
+          <h2 class="text-3xl md:text-4xl font-semibold tracking-tight reveal"><span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-purple via-neon-cyan to-neon-magenta">Projects</span></h2>
+        </div>
+        <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Sample cards -->
+          <div class="glass neon-border rounded-2xl p-5 flex flex-col gap-3 reveal">
+            <div class="h-36 rounded-xl bg-gradient-to-br from-neon-purple/40 via-neon-cyan/30 to-neon-magenta/30"></div>
+            <h3 class="text-lg font-semibold">Project One</h3>
+            <p class="text-sm text-white/70">Cyberpunk glass card with neon border and smooth hover.</p>
+            <div class="mt-auto">
+              <a href="#" class="btn-base neon-border glass neumorph"><span>View</span></a>
+            </div>
+          </div>
+
+          <div class="glass neon-border rounded-2xl p-5 flex flex-col gap-3 reveal">
+            <div class="h-36 rounded-xl bg-gradient-to-br from-neon-purple/40 via-neon-cyan/30 to-neon-magenta/30"></div>
+            <h3 class="text-lg font-semibold">Project Two</h3>
+            <p class="text-sm text-white/70">Responsive, fast, and aesthetic with neon accents.</p>
+            <div class="mt-auto">
+              <a href="#" class="btn-base neon-border glass neumorph"><span>View</span></a>
+            </div>
+          </div>
+
+          <div class="glass neon-border rounded-2xl p-5 flex flex-col gap-3 reveal">
+            <div class="h-36 rounded-xl bg-gradient-to-br from-neon-purple/40 via-neon-cyan/30 to-neon-magenta/30"></div>
+            <h3 class="text-lg font-semibold">Project Three</h3>
+            <p class="text-sm text-white/70">Glassmorphism panel with subtle glow.</p>
+            <div class="mt-auto">
+              <a href="#" class="btn-base neon-border glass neumorph"><span>View</span></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="glass rounded-2xl p-6 md:p-10 neon-border">
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight reveal"><span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-purple via-neon-cyan to-neon-magenta">Experience</span></h2>
+        <div class="mt-8 relative pl-6 reveal">
+          <div class="absolute left-2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-neon-purple via-neon-cyan to-neon-magenta"></div>
+          <div class="relative mb-8">
+            <div class="absolute -left-[11px] top-1 h-5 w-5 rounded-full bg-black border border-white/20 shadow-[0_0_10px_rgba(0,255,240,.7)]"></div>
+            <div class="glass neon-border rounded-xl p-4">
+              <p class="font-medium">Full-Stack Developer · <span class="text-white/80">Freelance</span></p>
+              <p class="text-sm text-white/60">2023 — Present</p>
+            </div>
+          </div>
+          <div class="relative mb-8">
+            <div class="absolute -left-[11px] top-1 h-5 w-5 rounded-full bg-black border border-white/20 shadow-[0_0_10px_rgba(155,92,255,.7)]"></div>
+            <div class="glass neon-border rounded-xl p-4">
+              <p class="font-medium">Frontend Developer · <span class="text-white/80">Studio X</span></p>
+              <p class="text-sm text-white/60">2022 — 2023</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="glass rounded-2xl p-6 md:p-10 neon-border">
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight reveal"><span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-purple via-neon-cyan to-neon-magenta">Contact</span></h2>
+        <form class="mt-6 grid md:grid-cols-2 gap-4 reveal" onsubmit="event.preventDefault(); alert('This static demo does not send messages.');">
+          <input name="name" placeholder="Your name" class="glass neon-border rounded-xl px-4 py-3 bg-transparent outline-none focus:ring-2 focus:ring-[rgba(155,92,255,.6)]" />
+          <input name="email" placeholder="you@email.com" type="email" class="glass neon-border rounded-xl px-4 py-3 bg-transparent outline-none focus:ring-2 focus:ring-[rgba(0,255,240,.6)]" />
+          <textarea name="message" placeholder="Message" rows="4" class="md:col-span-2 glass neon-border rounded-xl px-4 py-3 bg-transparent outline-none focus:ring-2 focus:ring-[rgba(255,0,255,.6)]"></textarea>
+          <div class="md:col-span-2">
+            <button class="btn-base neon-border glass neumorph"><span>Send</span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10 text-center text-white/50">© <span id="year"></span> Muhammed Rasal</footer>
+  <script src="./cyber.js"></script>
+</body>
+</html>
+
+
